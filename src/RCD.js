@@ -62,9 +62,9 @@ export default class extends PureComponent {
     brushColor: "#444",
     catenaryColor: "#0a0302",
     gridColor: "rgba(150,150,150,0.17)",
-    hideGrid: false,
-    canvasWidth: 400,
-    canvasHeight: 400,
+    hideGrid: true,
+    canvasWidth: 1000,
+    canvasHeight: 1000,
     disabled: false,
     imgSrc: "",
     saveData: "",
@@ -302,10 +302,11 @@ export default class extends PureComponent {
   };
 
   setCanvasSize = (canvas, width, height) => {
-    canvas.width = width;
-    canvas.height = height;
-    canvas.style.width = width;
-    canvas.style.height = height;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = window.innerWidth;
+    canvas.style.height = window.innerHeight;
   };
 
   getPointerPos = e => {

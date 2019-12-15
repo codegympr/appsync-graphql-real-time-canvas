@@ -25,8 +25,8 @@ function rand() {
 class Demo extends Component {
   state = {
     brushColor: rand(),
-    canvasHeight: 350,
-    canvasWidth: 380,
+    canvasHeight: 1000,
+    canvasWidth: 1000,
     brushRadius: 4,
     lazyRadius: 8
   }
@@ -145,7 +145,7 @@ class Demo extends Component {
   render() {
     return (
       <div>
-        <button name='clearbutton' onClick={this.clear}>Clear</button>
+        <button style={{zIndex:'10'}} name='clearbutton' onClick={this.clear}>Clear</button>
         <CanvasDraw
           {...this.state}
           ref={canvas => this.canvas = canvas}

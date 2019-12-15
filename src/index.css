@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  background-color: #e535ab;
+    padding: 0;
+  background-color: #ffffff;
 }
 
 span {
